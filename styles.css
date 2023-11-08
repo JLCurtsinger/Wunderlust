@@ -3,6 +3,10 @@
 v2.0 | 20110126
 License: none (public domain)
 */
+
+@import url('https://fonts.googleapis.com/css2?family=Molle&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -45,4 +49,48 @@ q:before, q:after {
 table {
     border-collapse: collapse;
     border-spacing: 0;
+}
+
+:root {
+    --yellow: #F6D64A;
+    --teal: #55BCD5;
+    --purple: #9B26B0;
+    --blue: #499BD2;
+    --dark-gray: #222222;
+    --light-gray: #EAEAEA;
+    --white: #FFFFFF;
+    --black: #000000;
+}
+
+/* skip link styles */
+header a {
+    position: absolute;
+    transform: translateY(101vw);
+}
+header a:focus {
+    transform: translate(45vw, 25%);
+}
+/* --------------------------------- */
+
+h1, h2, h3 {
+    font-family: 'Molle', cursive;
+}
+
+h4, p, q, small, nav, button, form {
+    font-family: 'Montserrat', sans-serif;
+}
+
+         /* small screens */
+@media screen and (max-width: 640px) {
+    
+}
+
+       /* medium screens */
+@media screen and (max-width: 1007px) {
+    
+}
+
+        /* large screens */
+@media screen and (min-width: 1008px) {
+    
 }
