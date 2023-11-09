@@ -50,6 +50,7 @@ table {
     border-collapse: collapse;
     border-spacing: 0;
 }
+/*---- end of CSS reset ----*/
 
 :root {
     --yellow: #F6D64A;
@@ -65,7 +66,7 @@ table {
 /* skip link styles */
 header a {
     position: absolute;
-    transform: translateY(101vw);
+    transform: translateY(-101vw);
 }
 header a:focus {
     transform: translate(45vw, 25%);
@@ -74,23 +75,95 @@ header a:focus {
 
 h1, h2, h3 {
     font-family: 'Molle', cursive;
+    font-size: 3rem;
+    font-weight: bold;
 }
 
 h4, p, q, small, nav, button, form {
     font-family: 'Montserrat', sans-serif;
+    font-size: 14pt;
 }
 
          /* small screens */
 @media screen and (max-width: 640px) {
+
+    #aboutDestination {
+        background-color: var(--blue);
+        display: grid;
+    }
+
+    footer {
+        background-color: var(--light-gray);
+        padding: 1rem 2rem;
+    }
+
+    form {
+        display: grid;
+    }
+
+    form input, form select {
+        border: 3px solid var(--purple);
+        margin: 0 2rem;
+        padding: 2rem 0;
+    }
+
+    h1, h2 {
+        padding-left: 2rem;
+    }
+
+    header p, #majorca p {
+        line-height: 2rem;
+        margin: 0 auto;
+        padding: 2rem;
+    }
+
+    #majorca img {
+        margin: 0 auto;
+        padding-bottom: 1rem;
+        width: 100vw;
+    }
+
+    nav {
+        background-color: var(--teal);
+        width: 100vw;
+    }
+
+    nav li {
+        padding: 2rem;
+        text-align: center;
+    }
+
+    #planTrip, #placesToStay, #thingsToDo, #whereToEat {
+        background-color: var(--yellow);
+        text-align: center;
+    }
+
+    #testimonials {
+        text-align: center;
+    }
+    #testimonials p {
+        margin: 0 auto;
+        width: 60vw;
+    }
+
+    li a {
+        border-bottom: 1px solid var(--black);
+        color: var(--black);
+        font-weight: bold;
+        padding: 1.8rem 5rem;
+        text-decoration: none;
+        text-transform: capitalize;
+        width: 100%;
+    }
     
 }
 
        /* medium screens */
-@media screen and (max-width: 1007px) {
+/* @media screen and (max-width: 1007px) {
     
-}
+} */
 
         /* large screens */
-@media screen and (min-width: 1008px) {
+/* @media screen and (min-width: 1008px) {
     
-}
+} */
