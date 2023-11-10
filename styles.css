@@ -4,8 +4,7 @@ v2.0 | 20110126
 License: none (public domain)
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Molle&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Molle&family=Montserrat&display=swap');
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -84,12 +83,114 @@ h4, p, q, small, nav, button, form {
     font-size: 14pt;
 }
 
+/*---- grid setup ----*/
+
+/* ask why the how to get there part of the planTrip is not in a section */
+
+#aboutDestination {
+    grid-area: aboutDestination;
+}
+#carmenLorenzo {
+    grid-area: carmen;
+}
+#elevation {
+    grid-area: elevation;
+}
+footer {
+    grid-area: footer;
+}
+form {
+    grid-area: form;
+}
+header h1 {
+    grid-area: mainHeader;
+}
+header img {
+    grid-area: logoImage;
+}
+header p {
+    grid-area: headerText;
+}
+#inesVillegoes {
+    grid-area: ines;
+}
+#location {
+    grid-area: location;
+}
+#majorca {
+    grid-area: majorca;
+}
+#maxWinter {
+    grid-area: max;
+}
+#mirandaBlake {
+    grid-area: miranda;
+}
+nav {
+    grid-area: nav;
+}
+#placesToStay {
+    grid-area: placesToStay;
+}
+#planTrip {
+    grid-area: planTrip;
+}
+#population {
+    grid-area: population;
+}
+#size {
+    grid-area: size;
+}
+#thingsToDo {
+    grid-area: thingsToDo;
+}
+#whereToEat {
+    grid-area: whereToEat;
+}
+#testimonials {
+    grid-area: testimonials;
+}
+/*---- end of grid setup ----*/
+
+
          /* small screens */
 @media screen and (max-width: 640px) {
 
     #aboutDestination {
         background-color: var(--blue);
         display: grid;
+        grid-template-areas:
+        "aboutDestination aboutDestination"
+        "size elevation"
+        "location population";
+        padding: 2rem;
+    }
+
+    /* how should I style this like the wireframe with the size and elevation text having different appearance but being in the same p tag? or how would I use the h3 text about only part of the p tag? */
+    #aboutDestination h3 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 18pt;
+        text-transform: uppercase;
+    }
+
+    #aboutDestination svg {
+        stroke: var(--white);
+    }
+
+    body {
+        display: grid;
+        grid-template-areas: 
+        "logoImage nav"
+        "mainHeader headerText"
+        "majorca majorca"
+        "planTrip PlanTrip"
+        "placesToStay placesToStay"
+        "thingsToDo thingsToDo"
+        "whereToEat whereToEat"
+        "testimonials testimonials"
+        "aboutDestination aboutDestination"
+        "form form"
+        "footer footer";
     }
 
     footer {
@@ -101,20 +202,58 @@ h4, p, q, small, nav, button, form {
         display: grid;
     }
 
+    form h3 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 18pt;
+        font-weight: bold;
+        padding-left: 2rem;
+        text-transform: uppercase;
+    }
+
     form input, form select {
         border: 3px solid var(--purple);
         margin: 0 2rem;
-        padding: 2rem 0;
+        padding: 1.8rem 0;
     }
 
-    h1, h2 {
+    form label {
+        font-weight: bold;
+        padding: 1rem 0 .2rem 2rem;
+        text-transform: uppercase;
+    }
+
+    input::placeholder {
+        color: var(--black);
+        font-size: 16pt;
+        padding-left: 1rem;
+    }
+
+    form input[type="radio"] {
+        background-color: var(--purple);
+        color: var(--purple);
+    }
+
+    h1, #majorca h2{
         padding-left: 2rem;
+    }
+
+    h1, h2, h3 {
+        padding-top: 2rem;
     }
 
     header p, #majorca p {
         line-height: 2rem;
         margin: 0 auto;
         padding: 2rem;
+    }
+
+    li a {
+        color: var(--black);
+        font-weight: bolder;
+        padding: 1.8rem 5rem;
+        text-decoration: none;
+        text-transform: uppercase;
+        width: 100%;
     }
 
     #majorca img {
@@ -129,6 +268,7 @@ h4, p, q, small, nav, button, form {
     }
 
     nav li {
+        border-bottom: 1px solid var(--black);
         padding: 2rem;
         text-align: center;
     }
@@ -138,22 +278,39 @@ h4, p, q, small, nav, button, form {
         text-align: center;
     }
 
-    #testimonials {
-        text-align: center;
+    /* #placesToStay, #thingsToDo, #whereToEat {
+        border: 2px solid var(--white);
+        border-radius: 10px;
+        margin: 0 auto;
+        width: 80vw;
+    } */
+
+    #planTrip svg, #placesToStay svg, #thingsToDo svg, #whereToEat svg {
+        stroke: var(--white);
     }
-    #testimonials p {
+
+    /* not sure how I can style this correctly without editing the html to add a div that contains these elements. */
+    #planTrip h3, #planTrip p, #planTrip svg {
+        background-color: var(--blue);
+        border: 2px solid var(--white);
+        border-radius: 10px;
         margin: 0 auto;
         width: 60vw;
     }
 
-    li a {
-        border-bottom: 1px solid var(--black);
-        color: var(--black);
+    #testimonials {
+        text-align: center;
+    }
+    #testimonials h3 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 26pt;
         font-weight: bold;
-        padding: 1.8rem 5rem;
-        text-decoration: none;
-        text-transform: capitalize;
-        width: 100%;
+        text-transform: uppercase;
+    }
+    #testimonials p {line-height: 1.5rem;
+
+        margin: 0 auto;
+        width: 60vw;
     }
     
 }
