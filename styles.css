@@ -62,6 +62,15 @@ table {
     --black: #000000;
 }
 
+#aboutDestination {
+    background-color: var(--blue);
+}
+
+/* not sure if this gradient is correct because the logo image has whitespace around it when using this */
+header {
+    background: linear-gradient(var(--teal), var(--white));
+}
+
 /* skip link styles */
 header a {
     position: absolute;
@@ -100,6 +109,7 @@ footer {
     grid-area: footer;
 }
 form {
+    background-color: var(--white);
     grid-area: form;
 }
 header h1 {
@@ -118,7 +128,17 @@ header p {
     grid-area: location;
 }
 #majorca {
+    background-color: var(--white);
     grid-area: majorca;
+}
+#majorca img:first-of-type {
+    grid-area: image1;
+}
+#majorca img:nth-of-type(2) {
+    grid-area: image2;
+}
+#majorca img:last-of-type {
+    grid-area: image3;
 }
 #maxWinter {
     grid-area: max;
@@ -148,16 +168,58 @@ nav {
     grid-area: whereToEat;
 }
 #testimonials {
+    background-color: var(--white);
     grid-area: testimonials;
 }
 /*---- end of grid setup ----*/
 
+#placesToStay h2, #planTrip p, #thingsToDo h2, #whereToEat h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20pt;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#placesToStay {
+    background-color: var(--teal);
+    border: 3px solid var(--white);
+    border-radius: 15px;
+    margin: .75rem 2rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+#planTrip {
+    background-color: var(--teal);
+    border: 3px solid var(--white);
+    border-radius: 15px;
+    margin: 6rem 2rem .8rem 2rem;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+#thingsToDo {
+    background-color: var(--teal);
+    border: 3px solid var(--white);
+    border-radius: 15px;
+    margin: .75rem 2rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+#whereToEat {
+    background-color: var(--teal);
+    border: 3px solid var(--white);
+    border-radius: 15px;
+    margin: .75rem 2rem;
+    padding: 1rem;
+    text-align: center;
+}
 
          /* small screens */
 @media screen and (max-width: 640px) {
 
     #aboutDestination {
-        background-color: var(--blue);
         display: grid;
         grid-template-areas:
         "aboutDestination aboutDestination"
@@ -178,6 +240,7 @@ nav {
     }
 
     body {
+        background-color: var(--yellow);
         display: grid;
         grid-template-areas: 
         "logoImage nav"
@@ -193,6 +256,7 @@ nav {
         "footer footer";
     }
 
+    /* not sure how I can style the footer accordingly because all the text is in one p tag */
     footer {
         background-color: var(--light-gray);
         padding: 1rem 2rem;
@@ -220,6 +284,14 @@ nav {
         font-weight: bold;
         padding: 1rem 0 .2rem 2rem;
         text-transform: uppercase;
+    }
+
+    /* why is this selector not styling the radio buttons? */
+    input[type="radio"] {
+        background-color: green;
+        color: green;
+        stroke: green;
+        fill: green;
     }
 
     input::placeholder {
@@ -273,10 +345,10 @@ nav {
         text-align: center;
     }
 
-    #planTrip, #placesToStay, #thingsToDo, #whereToEat {
+    /* #planTrip, #placesToStay, #thingsToDo, #whereToEat {
         background-color: var(--yellow);
         text-align: center;
-    }
+    } */
 
     /* #placesToStay, #thingsToDo, #whereToEat {
         border: 2px solid var(--white);
@@ -290,13 +362,13 @@ nav {
     }
 
     /* not sure how I can style this correctly without editing the html to add a div that contains these elements. */
-    #planTrip h3, #planTrip p, #planTrip svg {
+    /* #planTrip h3, #planTrip p, #planTrip svg {
         background-color: var(--blue);
         border: 2px solid var(--white);
         border-radius: 10px;
         margin: 0 auto;
         width: 60vw;
-    }
+    } */
 
     #testimonials {
         text-align: center;
@@ -316,11 +388,57 @@ nav {
 }
 
        /* medium screens */
-/* @media screen and (max-width: 1007px) {
+@media screen and (max-width: 1007px) {
     
-} */
+    body {
+        display: grid;
+        grid-template-areas: 
+        "logoImage logoImage"
+        "headerText headerText"
+        "majorca majorca"
+        "image1 image2"
+        "image3 image3"
+        "planTrip planTrip"
+        "planTrip placesToStay"
+        "thingsToDo whereToEat"
+        "testimonials testimonials"
+        "miranda max"
+        "ines carmen"
+        "aboutDestination aboutDestination"
+        "form form"
+        "footer footer";
+    }   
+    
+}
 
         /* large screens */
-/* @media screen and (min-width: 1008px) {
+@media screen and (min-width: 1008px) {
+
+    #aboutDestination {
+        display: flex;
+    }
+
+    body {
+        display: grid;
+        grid-template-areas:
+        "logoImage logoImage logoImage"
+        "mainHeader mainHeader mainHeader"
+        "headerText headerText headerText"
+        "majorca image1 image2"
+        "image3 image3 image3"
+        "planTrip planTrip planTrip"
+        "testimonials testimonials testimonials"
+        "aboutDestination aboutDestination aboutDestination"
+        "form form form"
+        "footer footer footer";
+    }
+
+    svg {
+        stroke: var(--white);
+    }
+
+    #testimonials {
+        display: flex;
+    }
     
-} */
+}
