@@ -390,7 +390,7 @@ nav {
        /* medium screens */
 @media screen and (max-width: 1007px) {
     
-    body {
+    /* body {
         display: grid;
         grid-template-areas: 
         "logoImage logoImage"
@@ -407,7 +407,11 @@ nav {
         "aboutDestination aboutDestination"
         "form form"
         "footer footer";
-    }   
+    }    */
+
+    body {
+        display: grid;
+    }
     
 }
 
