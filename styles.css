@@ -72,6 +72,9 @@ table {
 
 
 /* global styles */
+#about {
+    background-color: var(--blue);
+}
 
 h1, h2, h3 {
     font-family: 'Molle', cursive;
@@ -82,6 +85,19 @@ h4, p, q, small, nav, button, form {
 header {
     background: linear-gradient(var(--teal), var(--white));
 }
+
+#plan {
+    background-color: var(--yellow);
+}
+#plan h4 {
+    text-align: center;
+}
+#plan img {
+    background-color: var(--teal);
+    border: 3px solid var(--white);
+    border-radius: 15px;
+}
+
 .sr-only {
     display: none;
 }
@@ -174,18 +190,48 @@ header {
         right: -100px;
     }
 /* -------------------------------- */
+#about {
+    display: grid;
+    grid-template-areas: 
+    "aboutHeader aboutHeader"
+    "img 1 img2"
+    "img3 img4";
+    /* figure out why this didnt work */
+}
+#about h3 {
+    grid-area: aboutHeader;
+}
+#about img {
+    width: 25vw;
+}
 
 header h1 {
     font-size: 40pt;
+    padding-top: 2rem;
 }
 header p {
     font-size: 16pt;
+    padding: .5rem;
+}
+img[alt="ruler icon"] {
+    grid-area: img1;
+}
+img[alt="mountain icon"] {
+    grid-area: img2;
+}
+img[alt="location pin icon"] {
+    grid-area: img3;
+}
+img[alt="people icon"] {
+    grid-area: img4;
 }
 #intro h2 {
     font-size: 32pt;
+    padding-top: 3rem;
 }
 #intro p {
     font-size: 16pt;
+    padding: .5rem 0;
 }
 
 header h1, header p, #intro h2, #intro p {
@@ -201,6 +247,51 @@ img {
 #logo img {
     position: relative;
     width: 40vw;
+}
+
+#plan {
+    padding-bottom: 2rem;
+    text-align: center;
+}
+#plan h3 {
+    font-size: 32pt;
+    padding: 1.5rem 0 0 1.8rem;
+    text-align: left;
+}
+#plan h4 {
+    font-size: 20pt;
+    font-weight: bold;
+    text-transform: uppercase;
+    transform: translateY(4rem);
+}
+#plan img {
+    padding: 6rem 8rem 4rem 8rem;
+    width: 40vw;
+}
+
+#testimonials {
+    text-align: center;
+}
+#testimonials h3 {
+    font-size: 32pt;
+    padding: 4rem 0 0 1rem;
+    text-align: left;
+}
+#testimonials h4 {
+    font-size: 24pt;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+#testimonials img {
+    width: 45vw;
+}
+#testimonials p {
+    font-size: 16pt;
+}
+#testimonials q {
+    font-size: 17pt;
+    line-height: 1.7rem;
+    padding: 0 3rem;
 }
 
 }
