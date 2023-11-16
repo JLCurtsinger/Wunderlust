@@ -1,3 +1,5 @@
+/* how to style radio buttons? */
+
 @import url('https://fonts.googleapis.com/css2?family=Molle&family=Montserrat&display=swap');
 
 /* http://meyerweb.com/eric/tools/css/reset/
@@ -34,14 +36,6 @@ body {
 }
 ol, ul {
     list-style: none;
-}
-blockquote, q {
-    quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-    content: '';
-    content: none;
 }
 table {
     border-collapse: collapse;
@@ -127,7 +121,7 @@ header {
         width: 90vw;
         left: -140%;
     }
-    #menu--toggle:checked, #menu-toggle:checked ~ label {
+    #menu-toggle:checked, #menu-toggle:checked ~ label {
         position: absolute;
         margin: 0 auto;
     }
@@ -179,7 +173,7 @@ header {
         width: 90vw;
     }
     #menu-toggle input:checked ~ ul {
-        left: -90%;
+        left: -92%;
         top: 3.9rem;
     }
     #menu-toggle label {
@@ -192,17 +186,156 @@ header {
 /* -------------------------------- */
 #about {
     display: grid;
-    grid-template-areas: 
+    /* grid-template-areas: 
     "aboutHeader aboutHeader"
-    "img 1 img2"
-    "img3 img4";
+    "img1 img2"
+    "img3 img4"; */
     /* figure out why this didnt work */
+    margin-top: 2rem;
+    padding: 1rem 0 2rem 0;
+}
+#about div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 #about h3 {
+    font-size: 34pt;
     grid-area: aboutHeader;
+    overflow: visible;
+    padding: 1rem;
+
+}
+#about h3 {
+    grid-column: 1/3;
+    grid-row: 1/2;
+}
+#about h4 {
+    font-size: 16pt;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 #about img {
-    width: 25vw;
+    padding: 1rem 4rem;
+    width: 23vw;
+}
+#about p {
+    font-size: 16pt;
+}
+#about section {
+    text-align: center;
+}
+#about section:first-child {
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+#about section:nth-child(2) {
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+#about section:nth-child(3) {
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+#about section:nth-child(4) {
+    grid-column: 2/3;
+    grid-row: 2/3;
+}
+
+/* --------form styles-------- */
+.required {
+    text-align: left;
+}
+#contact {
+    display: grid;
+    padding: 1rem 0;
+}
+#contact h3 {
+    font-size: 30pt;
+    margin-bottom: 1rem;
+}
+#contact h3 span {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18pt;
+    font-style: italic;
+    font-weight: normal;
+}
+#contact input[type="text"], #contact input[type="email"], #contact input[type="tel"] {
+    border: 3px solid var(--purple);
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    padding: 2rem 1rem 2rem 1rem;
+    width: 80vw;
+}
+#contact label {
+    font-size: 16pt;
+    font-weight: bold;
+    padding: 2rem 0 1rem .5rem;
+    text-transform: uppercase;
+}
+#contact input::placeholder {
+    color: var(--black);
+    font-size: 16pt;
+}
+
+#nums legend {
+    font-size: 18pt;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+input[type="radio"] {
+    appearance: none;
+    border: 2px solid var(--purple);
+    border-radius: 50%;
+    display: block;
+    height: 85px;
+    width: 85px;
+}
+input[type="radio"]:checked {
+    fill: var(--purple);
+    /* background-color: var(--purple); */
+    border: 30px solid var(--purple);
+}
+input[type="submit"] {
+    background-color: var(--purple);
+    border: none;
+    color: var(--white);
+    font-size: 18pt;
+    letter-spacing: .01rem;
+    margin: 2rem auto .5rem auto;
+    padding: 2rem 11rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+#destination, #travelTime {
+    border: 3px solid var(--purple);
+    padding: 2rem 19rem 2rem .5rem;
+}
+#destination label, #travelTime label {
+    text-align: left;
+}
+form {
+    text-align: center;
+}
+/* label[for="prefEmail"], label[for="prefText"], label[for="prefPhone"] {
+} */
+
+/* cant get these labels to move and have run out of ideas for way to try to get them to mmove */
+/* ----------end of form styles------------ */
+
+footer {
+    background-color: var(--light-gray);
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0;
+    text-align: center;
+}
+footer a, footer p {
+    color: var(--black);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14pt;
+    padding: 1rem 0;
+    text-decoration: none;
 }
 
 header h1 {
@@ -212,18 +345,6 @@ header h1 {
 header p {
     font-size: 16pt;
     padding: .5rem;
-}
-img[alt="ruler icon"] {
-    grid-area: img1;
-}
-img[alt="mountain icon"] {
-    grid-area: img2;
-}
-img[alt="location pin icon"] {
-    grid-area: img3;
-}
-img[alt="people icon"] {
-    grid-area: img4;
 }
 #intro h2 {
     font-size: 32pt;
@@ -250,7 +371,8 @@ img {
 }
 
 #plan {
-    padding-bottom: 2rem;
+    margin-top: 2rem;
+    padding: 1rem 0 2rem 0;
     text-align: center;
 }
 #plan h3 {
@@ -265,7 +387,7 @@ img {
     transform: translateY(4rem);
 }
 #plan img {
-    padding: 6rem 8rem 4rem 8rem;
+    padding: 5rem 8rem 3rem 8rem;
     width: 40vw;
 }
 
@@ -291,15 +413,33 @@ img {
 #testimonials q {
     font-size: 17pt;
     line-height: 1.7rem;
-    padding: 0 3rem;
+    /* padding: 0 1rem; */
+}
+#testimonials section {
+    margin: 0 auto;
+    max-width: 20rem;
+    padding: 0 1rem;
+    text-align: center;
 }
 
 }
 
 /* medium screen styles */
-/* @media screen and (min-width: ?) {
-    
-} */
+@media screen and (min-width: 768px) {
+    ul, ul li {
+        display: contents;
+    }
+    ul li {
+        background-color: var(--yellow);
+        border: none;
+        color: var(--black);
+        /* display: flex;
+        flex-direction: row; */
+        margin: 0 auto;
+        padding: 1rem;
+        width: 20vw;
+    }
+}
 
 /* large screen styles */
 /* @media screen and (min-width: ?) {
