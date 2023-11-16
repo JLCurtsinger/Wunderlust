@@ -426,6 +426,25 @@ img {
 
 /* medium screen styles */
 @media screen and (min-width: 768px) {
+
+    /* ----global styles---- */
+    body {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    /* ----nav menu styles---- */
+    #menu-toggle:checked, #menu-toggle input:checked ~ label {
+        visibility: hidden;
+    }
+
+    /* not hiding the yellow rectangle like it should */
+    #menu-toggle input, #menu-toggle input ~ label {
+        visibility: hidden;
+    }
+    #toggle {
+        display: none;
+    }
     ul, ul li {
         display: contents;
     }
@@ -439,6 +458,29 @@ img {
         padding: 1rem;
         width: 20vw;
     }
+    /* ----------------------- */
+
+    /* -----grid layout----- */
+    header {
+        display: grid;
+    }
+    header a {
+        grid-column: 1/2;
+        grid-row: 1/3;
+    }
+    header h1 {
+        grid-column: 2/4;
+        grid-row: 1/2;
+    }
+    header p {
+        grid-column: 2/4;
+        grid-row: 2/3;
+    }
+    nav {
+        grid-column: 1/-1;
+        grid-row: 3/4;
+    }
+    /* --------------------- */
 }
 
 /* large screen styles */
