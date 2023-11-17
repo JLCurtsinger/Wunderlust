@@ -79,7 +79,9 @@ h4, p, q, small, nav, button, form {
 header {
     background: linear-gradient(var(--teal), var(--white));
 }
-
+html {
+    display: grid;
+}
 #plan {
     background-color: var(--yellow);
 }
@@ -96,6 +98,139 @@ header {
     display: none;
 }
 /* ---------------------------- */
+
+    /* -----grid area setup----- */
+
+    /* body {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
+    }
+    header {
+        display: grid;
+    }
+    header a {
+        grid-column: 1/2;
+        grid-row: 1/3;
+    }
+    header h1 {
+        grid-column: 2/4;
+        grid-row: 1/2;
+    }
+    header p {
+        grid-column: 2/4;
+        grid-row: 2/3;
+    }
+    nav {
+        grid-column: 1/-1;
+        grid-row: 3/4;
+    } */
+    #about {
+        grid-area: aboutDestination;
+    }
+    #about h3 {
+        grid-area: aboutHeader;
+    }
+    #about section:first-of-type {
+        grid-area: size;
+    }
+    #about section:nth-child(2) {
+        grid-area: elevation;
+    }
+    #about section:nth-child(3) {
+        grid-area: location;
+    }
+    #about section:nth-child(4) {
+        grid-area: population;
+    }
+    #contact {
+        grid-area: contact;
+    }
+    #contact h3 {
+        grid-area: contactHeader;
+    }
+    #contact form {
+        grid-area: form;
+    }
+    footer {
+        grid-area: footer;
+    }
+    header a {
+        grid-area: logoImg;
+    }    
+    header h1 {
+        grid-area: headerLogo;
+    }
+    header p {
+        grid-area: headerText;
+    }
+    #intro img:first-child {
+        grid-area: img1;
+    }
+    #intro img:nth-of-type(2) {
+        grid-area: img2;
+    }
+    #intro img:last-child {
+        grid-area: img3;
+    }
+    #intro h2 {
+        grid-area: majorcaHeader;
+    }
+    #intro p {
+        grid-area: majorcaText;
+    }
+    #menu-toggle li:first-child a {
+        grid-area: destinationsNav;
+    }
+    #menu-toggle li:nth-child(2) a {
+        grid-area: inspirationsNav;
+    }
+    #menu-toggle li:nth-child(3) a {
+        grid-area: specialsNav;
+    }
+    #menu-toggle li:nth-child(4) a {
+        grid-area: contactNav;
+    }
+    #plan {
+        grid-area: planTrip;
+    }
+    #plan h3 {
+        grid-area: planTripHeader;
+    }
+    #plan section:first-of-type {
+        grid-area: howToGetThere;
+    }
+    #plan section:nth-child(2) {
+        grid-area: placesToStay;
+    }
+    #plan section:nth-child(3) {
+        grid-area: thingsToDo;
+    }
+    #plan section:nth-child(4) {
+        grid-area: whereToEat;
+    }
+    #testimonials {
+        grid-area: testimonials;
+    }
+    #testimonials h3 {
+        grid-area: testimonialsHeader;
+    }
+    #testimonials section:first-of-type {
+        grid-area: amanda;
+    }
+    #testimonials section:nth-child(2) {
+        grid-area: max;
+    }
+    #testimonials section:nth-child(3) {
+        grid-area: ines;
+    }
+    #testimonials section:nth-child(4) {
+        grid-area: carmen;
+    }
+    /* ----End of grid area setup---- */
+
+
+
 
 /* small screen styles */
 @media screen and (min-width: 320px) {
@@ -424,14 +559,12 @@ img {
 
 }
 
+
+
+
+
 /* medium screen styles */
 @media screen and (min-width: 768px) {
-
-    /* ----global styles---- */
-    body {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-    }
 
     /* ----nav menu styles---- */
     #menu-toggle:checked, #menu-toggle input:checked ~ label {
@@ -460,30 +593,64 @@ img {
     }
     /* ----------------------- */
 
-    /* -----grid layout----- */
-    header {
+
+    /* ----grid setup---- */
+    /* (first (actually 2nd or 3rd) attempt did not work) 
+    body {
         display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+        "logoImg logoImg headerLogo headerLogo"
+        "logoImg logoImg headerText headerText"
+        "destinationsNav inspirationsNav specialsNav contactNav"
+        "majorcaHeader majorcaHeader . ."
+        "majorcaText majorcaText majorcaText majorcaText"
+        "img1 img1 img2 img2"
+        "img3 img3 img3 img3"
+        "planTripHeader planTripHeader . ."
+        "howToGetThere howToGetThere placesToStay placesToStay"
+        "thingsToDo thingsToDo whereToEat whereToEat"
+        "testimonialsHeader testimonialsHeader . ."
+        "amanda amanda max max"
+        "ines ines carmen carmen"
+        "aboutHeader aboutHeader . ."
+        "size elevation location population"
+        "contactHeader contactHeader . ."
+        "footer footer footer footer";
+    } */
+
+    body {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto;
+        grid-template-areas:
+            "logoImg headerLogo headerLogo headerLogo"
+            "logoImg headerText headerText headerText"
+            "destinationsNav inspirationsNav specialsNav contactNav"
+            "majorcaHeader majorcaHeader majorcaHeader majorcaHeader"
+            "majorcaText majorcaText majorcaText majorcaText"
+            "img1 img1 img2 img2"
+            "img3 img3 img3 img3"
+            "planTripHeader planTripHeader planTripHeader planTripHeader"
+            "howToGetThere placesToStay thingsToDo whereToEat"
+            "testimonialsHeader testimonialsHeader testimonialsHeader testimonialsHeader"
+            "amanda amanda max max"
+            "ines ines carmen carmen"
+            "aboutHeader aboutHeader aboutHeader aboutHeader"
+            "size elevation location population"
+            "contactHeader contactHeader contactHeader contactHeader"
+            "footer footer footer footer";
     }
-    header a {
-        grid-column: 1/2;
-        grid-row: 1/3;
-    }
-    header h1 {
-        grid-column: 2/4;
-        grid-row: 1/2;
-    }
-    header p {
-        grid-column: 2/4;
-        grid-row: 2/3;
-    }
-    nav {
-        grid-column: 1/-1;
-        grid-row: 3/4;
-    }
-    /* --------------------- */
+
+    /* --end of grid setup-- */
 }
 
+
+
+
+
 /* large screen styles */
-/* @media screen and (min-width: ?) {
+/* @media screen and (min-width: 1025px) {
     
 } */
