@@ -830,10 +830,118 @@ form {
 /* large screen styles */
 @media screen and (min-width: 1025px) {
 
-    article, aside, details, figcaption, figure, 
+    #about h4 {
+        font-size: 14pt;
+        font-weight: bold;
+        padding: .5rem;
+        text-transform: uppercase;
+    }
+    #about section {
+        padding: .5rem;
+        text-align: center;
+    }
+
+    /* this kind of works but is pushing everything to the right and off the screen rather than below it */
+    /* header {
+        width: 100vw;
+    } */
+
+    header h1 {
+        font-size: 24pt;
+    }
+
+    /* article, aside, details, figcaption, figure, 
     footer, header, hgroup, menu, nav, section {
     display: grid;
+} */
+
+/* why does this not change anything?
+#about {
+    display: flex;
+    flex-direction: row;
+} */
+
+/* --------form styles-------- */
+.required {
+    text-align: left;
 }
+#contact {
+    display: grid;
+    padding: 1rem 0;
+}
+#contact h3 {
+    font-size: 30pt;
+    margin-bottom: 1rem;
+}
+#contact h3 span {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18pt;
+    font-style: italic;
+    font-weight: normal;
+}
+#contact input[type="text"], #contact input[type="email"], #contact input[type="tel"] {
+    border: 3px solid var(--purple);
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    padding: 1.5rem 1rem;
+    width: 25vw;
+}
+#contact label {
+    font-size: 16pt;
+    font-weight: bold;
+    padding: 2rem 0 1rem .5rem;
+    text-transform: uppercase;
+}
+#contact input::placeholder {
+    color: var(--black);
+    font-size: 16pt;
+}
+
+#nums legend {
+    font-size: 18pt;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+input[type="radio"] {
+    appearance: none;
+    border: 2px solid var(--purple);
+    border-radius: 50%;
+    display: block;
+    height: 85px;
+    width: 85px;
+}
+input[type="radio"]:checked {
+    fill: var(--purple);
+    /* background-color: var(--purple); */
+    border: 30px solid var(--purple);
+}
+input[type="submit"] {
+    background-color: var(--purple);
+    border: none;
+    color: var(--white);
+    font-size: 18pt;
+    letter-spacing: .01rem;
+    margin: 2rem auto .5rem auto;
+    padding: 2rem 11rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+#destination, #travelTime {
+    border: 3px solid var(--purple);
+    padding: 2rem 19rem 2rem .5rem;
+}
+#destination label, #travelTime label {
+    text-align: left;
+}
+form {
+    text-align: center;
+}
+/* label[for="prefEmail"], label[for="prefText"], label[for="prefPhone"] {
+} */
+
+/* cant get these labels to move and have run out of ideas for way to try to get them to mmove */
+/* ----------end of form styles------------ */
 
     /* ----grid setup---- */
     body {
@@ -867,6 +975,7 @@ form {
         display: flex;
         font-size: 12pt;
         padding: 1rem;
+        width: 100vw;
     }
     footer p {
         float: left;
@@ -882,6 +991,10 @@ form {
         float: right;
         margin-right: 2rem;
         text-decoration: none;
+    }
+
+    h2, h3 {
+        font-size: 16pt;
     }
 
     #menu-toggle {
@@ -901,8 +1014,53 @@ form {
     #menu-toggle ul li a:hover, #menu-toggle ul li a:focus {
         background-color: var(--yellow);
     }
+
+    nav {
+        text-align: center;
+    }
     /* nav {
         grid-column: 1/4;
         grid-row: 1/-1;
     } */
+
+    p {
+        line-height: 1.5rem;
+    }
+
+    /* why did this not work?
+    #plan {
+        display: flex;
+    } */
+
+    #plan img {
+        padding: 3rem 2rem 2rem 2rem;
+    }
+    #plan h4 {
+        font-size: 14pt;
+        font-weight: bold;
+        text-transform: uppercase;
+        transform: translateY(2rem);
+    }
+    #plan section {
+        text-align: center;
+    }
+
+    /* why did this not work?
+    #testimonials {
+        display: flex;
+        flex-direction: row;
+    } */
+
+    #testimonials h4 {
+        font-size: 14pt;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    #testimonials img {
+        padding: .5rem;
+    }
+    #testimonials section {
+        padding: .5rem;
+        text-align: center;
+    }
 }
