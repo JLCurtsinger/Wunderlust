@@ -566,6 +566,49 @@ img {
 /* medium screen styles */
 @media screen and (min-width: 768px) and (max-width: 1024px) {
 
+    #about {
+        /* display: grid;
+        grid-template-columns: repeat(1fr, 4);
+        grid-template-rows: auto; */
+        /* why didn't this work? --------------------------------*/
+        /* grid-template-areas: 
+        "size elevation location population"; */
+    }
+    #about h4 {
+        font-size: 14pt;
+        font-weight: bold;
+        padding: .5rem;
+        text-transform: uppercase;
+    }
+    #about section {
+        text-align: center;
+    }
+
+    h3 {
+        font-size: 24pt;
+    }
+
+    header h1 {
+        font-size: 28pt;
+    }
+
+    #main-content h2 {
+        font-size: 22pt;
+    }
+    #main-content p, header p {
+        line-height: 1.4rem;
+    }
+
+    #testimonials h4 {
+        font-size: 18pt;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    #testimonials section {
+        text-align: center;
+    }
+
+
     /* ----nav menu styles---- */
     #menu-toggle:checked, #menu-toggle input:checked ~ label {
         visibility: hidden;
@@ -591,8 +634,107 @@ img {
         padding: 1rem;
         width: 20vw;
     }
+
+    #menu-toggle {
+        visibility: hidden;
+    }
+    #menu-toggle ul li a {
+        background-color: var(--white);
+        color: var(--black);
+        display: grid;
+        font-weight: bold;
+        margin: 1rem;
+        padding: 1rem;
+        text-decoration: none;
+        text-transform: uppercase;
+        visibility: visible;
+    }
+    #menu-toggle ul li a:hover, #menu-toggle ul li a:focus {
+        background-color: var(--yellow);
+    }
     /* ----------------------- */
 
+    /* --------form styles-------- */
+.required {
+    text-align: left;
+}
+#contact {
+    display: grid;
+    padding: 1rem 0;
+}
+#contact h3 {
+    font-size: 30pt;
+    margin-bottom: 1rem;
+}
+#contact h3 span {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18pt;
+    font-style: italic;
+    font-weight: normal;
+}
+#contact input[type="text"], #contact input[type="email"], #contact input[type="tel"] {
+    border: 3px solid var(--purple);
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    padding: 2rem 1rem 2rem 1rem;
+    width: 80vw;
+}
+#contact label {
+    font-size: 16pt;
+    font-weight: bold;
+    padding: 2rem 0 1rem .5rem;
+    text-transform: uppercase;
+}
+#contact input::placeholder {
+    color: var(--black);
+    font-size: 16pt;
+}
+
+#nums legend {
+    font-size: 18pt;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+input[type="radio"] {
+    appearance: none;
+    border: 2px solid var(--purple);
+    border-radius: 50%;
+    display: block;
+    height: 85px;
+    width: 85px;
+}
+input[type="radio"]:checked {
+    fill: var(--purple);
+    /* background-color: var(--purple); */
+    border: 30px solid var(--purple);
+}
+input[type="submit"] {
+    background-color: var(--purple);
+    border: none;
+    color: var(--white);
+    font-size: 18pt;
+    letter-spacing: .01rem;
+    margin: 2rem auto .5rem auto;
+    padding: 2rem 11rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+#destination, #travelTime {
+    border: 3px solid var(--purple);
+    padding: 2rem 19rem 2rem .5rem;
+}
+#destination label, #travelTime label {
+    text-align: left;
+}
+form {
+    text-align: center;
+}
+/* label[for="prefEmail"], label[for="prefText"], label[for="prefPhone"] {
+} */
+
+/* cant get these labels to move and have run out of ideas for way to try to get them to mmove */
+/* ----------end of form styles------------ */
 
     /* ----grid setup---- */
     /* (first (actually 2nd or 3rd) attempt did not work) 
