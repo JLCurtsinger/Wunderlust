@@ -566,14 +566,14 @@ img {
 /* medium screen styles */
 @media screen and (min-width: 768px) and (max-width: 1024px) {
 
-    #about {
-        /* display: grid;
+    /* #about {
+        display: grid;
         grid-template-columns: repeat(1fr, 4);
-        grid-template-rows: auto; */
-        /* why didn't this work? --------------------------------*/
-        /* grid-template-areas: 
-        "size elevation location population"; */
-    }
+        grid-template-rows: auto;
+        why didn't this work? --------------------------------
+        grid-template-areas: 
+        "size elevation location population";
+    } */
     #about h4 {
         font-size: 14pt;
         font-weight: bold;
@@ -582,6 +582,28 @@ img {
     }
     #about section {
         text-align: center;
+    }
+
+    footer {
+        background-color: var(--light-gray);
+        display: flex;
+        font-size: 12pt;
+        padding: 1rem;
+    }
+    footer p {
+        float: left;
+        margin-left: 2rem;
+    }
+    footer a:first-of-type {
+        color: var(--black);
+        margin: 0 auto;
+        text-decoration: none;
+    }
+    footer a:last-of-type {
+        color: var(--black);
+        float: right;
+        margin-right: 2rem;
+        text-decoration: none;
     }
 
     h3 {
@@ -597,6 +619,19 @@ img {
     }
     #main-content p, header p {
         line-height: 1.4rem;
+    }
+
+    #plan h4 {
+        font-size: 14pt;
+        font-weight: bold;
+        text-transform: uppercase;
+        transform: translateY(2.5rem);
+    }
+    #plan img {
+        padding: 4rem 4rem 2rem 4rem;
+    }
+    #plan section {
+        text-align: center;
     }
 
     #testimonials h4 {
@@ -826,6 +861,28 @@ form {
             "footer footer footer footer"; */
     }
     /* ----end of grid setup---- */
+
+    footer {
+        background-color: var(--light-gray);
+        display: flex;
+        font-size: 12pt;
+        padding: 1rem;
+    }
+    footer p {
+        float: left;
+        margin-left: 2rem;
+    }
+    footer a:first-of-type {
+        color: var(--black);
+        margin: 0 auto;
+        text-decoration: none;
+    }
+    footer a:last-of-type {
+        color: var(--black);
+        float: right;
+        margin-right: 2rem;
+        text-decoration: none;
+    }
 
     #menu-toggle {
         visibility: hidden;
