@@ -451,25 +451,34 @@ input[type="submit"] {
     text-transform: uppercase;
 }
 
+label[for="email"], input[type="email"] {
+    margin-top: 13rem;
+}
+
+/* not working. need to position labels for radio inputs still */
+/* label[for="prefEmail"] {
+    position: relative;
+    transform: translateX(-200%);
+} */
 
 #prefEmail {
     float: left;
-    margin-left: -180%;
-    position: relative;
-    transform: translateY(-50%);
+    margin-left: -310%;
+    position: absolute;
+    transform: translateY(-15%);
 }
 #prefPhone {
     float: left;
-    margin-left: -102%;
+    margin-left: -2%;
     margin-bottom: 5rem;
-    position: relative;
-    transform: translateY(9%);
+    position: absolute;
+    transform: translateY(45%);
 }
 #prefText {
     float: left;
-    margin-left: -2%;
-    position: relative;
-    transform: translateY(-65%);
+    margin-left: -504%;
+    position: absolute;
+    transform: translateY(230%);
 }
 
 #nums label {
