@@ -308,7 +308,7 @@ html {
         width: 90vw;
     }
     #menu-toggle input:checked ~ ul {
-        left: -92%;
+        left: -90%;
         top: 3.9rem;
     }
     #menu-toggle label {
@@ -398,29 +398,38 @@ html {
     border: 3px solid var(--purple);
     margin: 0 auto;
     margin-bottom: 2rem;
+    margin-top: 1rem;
     padding: 2rem 1rem 2rem 1rem;
     width: 80vw;
 }
 #contact label {
+    float: left;
     font-size: 16pt;
     font-weight: bold;
-    padding: 2rem 0 1rem .5rem;
+    padding: 1rem 0 1rem 30px;
     text-transform: uppercase;
+    transform: translateY(50%);
 }
 #contact input::placeholder {
     color: var(--black);
     font-size: 16pt;
 }
 
-#nums legend {
-    font-size: 18pt;
-    font-weight: bold;
-    margin-bottom: 1rem;
-    text-transform: uppercase;
+#destination, #travelTime {
+    border: 3px solid var(--purple);
+    padding: 2rem 19rem 2rem .5rem;
 }
+#destination label, #travelTime label {
+    text-align: left;
+}
+
+form {
+    text-align: center;
+}
+
 input[type="radio"] {
     appearance: none;
-    border: 2px solid var(--purple);
+    border: 3px solid var(--purple);
     border-radius: 50%;
     display: block;
     height: 85px;
@@ -428,7 +437,6 @@ input[type="radio"] {
 }
 input[type="radio"]:checked {
     fill: var(--purple);
-    /* background-color: var(--purple); */
     border: 30px solid var(--purple);
 }
 input[type="submit"] {
@@ -442,16 +450,49 @@ input[type="submit"] {
     text-align: center;
     text-transform: uppercase;
 }
-#destination, #travelTime {
-    border: 3px solid var(--purple);
-    padding: 2rem 19rem 2rem .5rem;
+
+
+#prefEmail {
+    float: left;
+    margin-left: -180%;
+    position: relative;
+    transform: translateY(-50%);
 }
-#destination label, #travelTime label {
-    text-align: left;
+#prefPhone {
+    float: left;
+    margin-left: -102%;
+    margin-bottom: 5rem;
+    position: relative;
+    transform: translateY(9%);
 }
-form {
-    text-align: center;
+#prefText {
+    float: left;
+    margin-left: -2%;
+    position: relative;
+    transform: translateY(-65%);
 }
+
+#nums label {
+    font-weight: normal;
+    text-transform: capitalize;
+}
+#nums legend {
+    float: left;
+    font-size: 18pt;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    padding-left: 30px;
+    text-transform: uppercase;
+}
+
+
+#selects label {
+    transform: translateY(25%);
+}
+span[class="required"] {
+    color: var(--purple);
+}
+
 /* label[for="prefEmail"], label[for="prefText"], label[for="prefPhone"] {
 } */
 
@@ -524,6 +565,11 @@ img {
 #plan img {
     padding: 5rem 8rem 3rem 8rem;
     width: 40vw;
+}
+
+#plan img[src="images/stay.svg"] {
+    padding-top: 7.5rem;
+    padding-bottom: 4.5rem;
 }
 
 #testimonials {
