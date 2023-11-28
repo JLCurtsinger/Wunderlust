@@ -665,6 +665,15 @@ img {
         font-size: 24pt;
     }
 
+    /* header {
+        display: flex;
+    } */
+    header p {
+        float: right;
+    }
+    nav ul {
+        display: flex;
+    }
     header h1 {
         font-size: 28pt;
     }
@@ -852,7 +861,7 @@ form {
         "footer footer footer footer";
     } */
 
-    body {
+    /* body {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: auto;
@@ -873,7 +882,7 @@ form {
             "size elevation location population"
             "contactHeader contactHeader contactHeader contactHeader"
             "footer footer footer footer";
-    }
+    } */
 
     /* --end of grid setup-- */
 }
@@ -1029,6 +1038,7 @@ form {
         background-color: var(--light-gray);
         display: flex;
         font-size: 12pt;
+        margin-left: -80rem;
         padding: 1rem;
         width: 100vw;
     }
