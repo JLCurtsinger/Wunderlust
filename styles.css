@@ -629,6 +629,13 @@ img {
         grid-template-areas: 
         "size elevation location population";
     } */
+    #about {
+        transform: translateY(45%);
+    }
+    #about h3 {
+        margin-top: 33rem;
+        padding-bottom: 1.5rem;
+    }
     #about h4 {
         font-size: 14pt;
         font-weight: bold;
@@ -636,13 +643,19 @@ img {
         text-transform: uppercase;
     }
     #about section {
+        padding-bottom: 1rem;
         text-align: center;
+    }
+    #about section:nth-child(odd) {
+        float: left;
+        padding-left: 8rem;
     }
 
     footer {
         background-color: var(--light-gray);
         display: flex;
         font-size: 12pt;
+        max-width: 100vw;
         padding: 1rem;
     }
     footer p {
@@ -668,8 +681,20 @@ img {
     /* header {
         display: flex;
     } */
+    header h1 {
+        margin-top: -5rem;
+        transform: translateX(30%);
+    }
     header p {
-        float: right;
+        /* float: right; */
+        /* margin-right: 20rem; */
+        margin-left: 18rem;
+        max-width: 400px;
+        transform: translateY(-10%);
+    }
+    nav {
+        margin: 0 auto;
+        width: 100vw;
     }
     nav ul {
         display: flex;
@@ -685,6 +710,11 @@ img {
         line-height: 1.4rem;
     }
 
+    #plan {
+        margin-bottom: 1rem;
+        max-width: 100vw;
+        width: 100vw;
+    }
     #plan h4 {
         font-size: 14pt;
         font-weight: bold;
@@ -697,15 +727,49 @@ img {
     #plan section {
         text-align: center;
     }
+    #plan section:first-of-type {
+        float: left;
+        transform: translateX(8%);
+    }
+    #plan section:nth-of-type(2) {
+        float: right;
+        transform: translateX(-5%);
+    }
+    #plan section:nth-of-type(3) {
+        float: left;
+        transform: translateX(-92%);
+    }
+    #plan section:nth-of-type(4) {
+        margin-left: 10rem;
+        margin-right: -12rem;
+        transform: translateY(-30%);
+    }
 
+    #testimonials {
+        max-width: 100vw;
+        padding-bottom: 2rem;
+    }
+    #testimonials h3 {
+        transform: translateX(5%);
+    }
     #testimonials h4 {
         font-size: 18pt;
         font-weight: bold;
         text-transform: uppercase;
     }
     #testimonials section {
+        margin: 0 .1rem;
+        max-width: 49%;
+        padding-top: 1rem;
         text-align: center;
     }
+    #testimonials section:nth-child(odd) {
+        float: left;
+    }
+    #testimonials section:nth-child(even) {
+        float: right;
+    }
+
 
 
     /* ----nav menu styles---- */
@@ -759,6 +823,7 @@ img {
 }
 #contact {
     display: grid;
+    margin-top: 17rem;
     padding: 1rem 0;
 }
 #contact h3 {
@@ -773,12 +838,12 @@ img {
 }
 #contact input[type="text"], #contact input[type="email"], #contact input[type="tel"] {
     border: 3px solid var(--purple);
-    margin: 0 auto;
-    margin-bottom: 2rem;
-    padding: 2rem 1rem 2rem 1rem;
+    margin: 0 14rem 2rem auto;
+    padding: 2rem 6rem 2rem 1rem;
     width: 80vw;
 }
 #contact label {
+    float: left;
     font-size: 16pt;
     font-weight: bold;
     padding: 2rem 0 1rem .5rem;
@@ -801,6 +866,7 @@ input[type="radio"] {
     border-radius: 50%;
     display: block;
     height: 85px;
+    margin: 0 5rem;
     width: 85px;
 }
 input[type="radio"]:checked {
@@ -812,17 +878,21 @@ input[type="submit"] {
     background-color: var(--purple);
     border: none;
     color: var(--white);
+    float: right;
     font-size: 18pt;
     letter-spacing: .01rem;
-    margin: 2rem auto .5rem auto;
-    padding: 2rem 11rem;
+    margin: 2rem 15rem .5rem auto;
+    padding: 1.8rem 8rem;
     text-align: center;
     text-transform: uppercase;
 }
 #destination, #travelTime {
     border: 3px solid var(--purple);
-    padding: 2rem 19rem 2rem .5rem;
+    margin: 0 15rem 0 1rem;
+    padding: 1.5rem 38rem 1.5rem .5rem;
 }
+
+/* v not doing anything?? v  */
 #destination label, #travelTime label {
     text-align: left;
 }
