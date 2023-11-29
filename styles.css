@@ -713,6 +713,7 @@ img {
     #plan {
         margin-bottom: 1rem;
         max-width: 100vw;
+        padding-bottom: 4rem;
         width: 100vw;
     }
     #plan h4 {
@@ -737,12 +738,12 @@ img {
     }
     #plan section:nth-of-type(3) {
         float: left;
+        margin-top: 2rem;
         transform: translateX(-92%);
     }
     #plan section:nth-of-type(4) {
-        margin-left: 10rem;
         margin-right: -12rem;
-        transform: translateY(-30%);
+        transform: translateY(8%);
     }
 
     #testimonials {
@@ -964,6 +965,13 @@ form {
 /* large screen styles */
 @media screen and (min-width: 1025px) {
 
+    #about {
+         padding-top: 2rem;
+    }
+    #about h3 {
+        font-size: 28pt;
+        transform: translateX(-15%);
+    }
     #about h4 {
         font-size: 14pt;
         font-weight: bold;
@@ -971,8 +979,15 @@ form {
         text-transform: uppercase;
     }
     #about section {
-        padding: .5rem;
+        display: inline-block;
+        padding: 1rem;
         text-align: center;
+    }
+
+    body {
+        margin: 0 auto;
+        max-width: 100vw;
+        width: 100vw;
     }
 
     /* this kind of works but is pushing everything to the right and off the screen rather than below it */
@@ -989,7 +1004,7 @@ form {
     display: grid;
 } */
 
-/* why does this not change anything?
+/* not changing anything?
 #about {
     display: flex;
     flex-direction: row;
@@ -1071,6 +1086,11 @@ input[type="submit"] {
 form {
     text-align: center;
 }
+form div {
+    display: grid;
+    margin: 0 auto;
+    width: 100vw;
+}
 /* label[for="prefEmail"], label[for="prefText"], label[for="prefPhone"] {
 } */
 
@@ -1078,13 +1098,13 @@ form {
 /* ----------end of form styles------------ */
 
     /* ----grid setup---- */
-    body {
+    /* body {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: auto;
 
-        /* this is not changing anything */
-        /* grid-template-areas:
+        
+        grid-template-areas:
             "destinationsNav inspirationsNav specialsNav contactNav"
             "logoImg headerLogo headerLogo headerLogo"
             "logoImg headerText headerText headerText"
@@ -1100,16 +1120,16 @@ form {
             "aboutHeader aboutHeader aboutHeader aboutHeader"
             "size elevation location population"
             "contactHeader contactHeader contactHeader contactHeader"
-            "footer footer footer footer"; */
-    }
+            "footer footer footer footer";
+    } */
     /* ----end of grid setup---- */
 
     footer {
         background-color: var(--light-gray);
         display: flex;
         font-size: 12pt;
-        margin-left: -80rem;
         padding: 1rem;
+        text-align: center;
         width: 100vw;
     }
     footer p {
@@ -1128,8 +1148,42 @@ form {
         text-decoration: none;
     }
 
+    header h1 {
+        float: right;
+        font-size: 34pt;
+        position: relative;
+        top: 20px;
+        transform: translateX(-250%);
+    }
+    header img {
+        margin: 1rem 0 0 12rem;
+    }
+    header p {
+        float: right;
+        max-width: 400px;
+        position: relative;
+        top: 70px;
+        transform: translateX(-56%);
+    }
+
     h2, h3 {
         font-size: 16pt;
+    }
+
+    #intro h2 {
+        font-size: 28pt;
+        margin-left: -49rem;
+    }
+    #intro img {
+        padding: .5rem;
+    }
+    #intro p {
+        line-height: 1.6rem;
+        padding: .5rem 16rem;
+    }
+
+    #main-content {
+        text-align: center;
     }
 
     #menu-toggle {
@@ -1151,7 +1205,16 @@ form {
     }
 
     nav {
+        margin-bottom: 2.5rem;
         text-align: center;
+    }
+    nav li {
+        margin: 0 2rem;
+        width: 200px;
+    }
+    nav ul {
+        display: flex;
+        justify-content: center;
     }
     /* nav {
         grid-column: 1/4;
@@ -1162,13 +1225,17 @@ form {
         line-height: 1.5rem;
     }
 
-    /* why did this not work?
     #plan {
-        display: flex;
-    } */
-
+        margin-bottom: 1rem;
+        padding-bottom: 1rem;
+    }
     #plan img {
         padding: 3rem 2rem 2rem 2rem;
+    }
+    #plan h3 {
+        font-size: 28pt;
+        padding-top: 2rem;
+        transform: translateX(-25%);
     }
     #plan h4 {
         font-size: 14pt;
@@ -1178,14 +1245,22 @@ form {
     }
     #plan section {
         text-align: center;
+        padding: 1rem;
+    }
+    #plan section:nth-of-type(odd) {
+        float: left;
+    }
+    #plan section:first-of-type {
+        transform: translateX(101%);
+    } 
+    #plan section:nth-of-type(2) {
+        transform: translateX(10%);
     }
 
-    /* why did this not work?
-    #testimonials {
-        display: flex;
-        flex-direction: row;
-    } */
-
+    #testimonials h3 {
+        font-size: 28pt;
+        transform: translateX(-25%);
+    }
     #testimonials h4 {
         font-size: 14pt;
         font-weight: bold;
@@ -1195,7 +1270,21 @@ form {
         padding: .5rem;
     }
     #testimonials section {
-        padding: .5rem;
+        max-width: 930px;
+        padding: 1rem .5rem;
         text-align: center;
+        transform: translateX(15%);
+    }
+    #testimonials section:nth-of-type(odd) {
+        float: left;
+    }
+    #testimonials section:nth-of-type(3) {
+        transform: translateX(55%);
+    }
+    #testimonials section:nth-of-type(4) {
+        transform: translateX(30%);
+    }
+    #testimonials section q {
+        padding: 3rem;
     }
 }
