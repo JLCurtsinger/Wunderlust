@@ -966,7 +966,7 @@ form {
 @media screen and (min-width: 1025px) {
 
     #about {
-         padding-top: 2rem;
+         padding: 5rem 0;
     }
     #about h3 {
         font-size: 28pt;
@@ -1017,10 +1017,11 @@ form {
 #contact {
     display: grid;
     padding: 1rem 0;
+    transform: translateY(10%);
 }
 #contact h3 {
     font-size: 30pt;
-    margin-bottom: 1rem;
+    transform: translateX(-30%);
 }
 #contact h3 span {
     font-family: 'Montserrat', sans-serif;
@@ -1046,6 +1047,19 @@ form {
     font-size: 16pt;
 }
 
+label[for="fName"] {
+    margin-top: 2rem;
+}
+
+#names {
+    float: left;
+    transform: translateX(-30%);
+}
+
+#nums {
+    max-width: 25vw;
+    transform: translateY(-40%);
+}
 #nums legend {
     font-size: 18pt;
     font-weight: bold;
@@ -1091,6 +1105,37 @@ form div {
     margin: 0 auto;
     width: 100vw;
 }
+
+#mySubmit {
+    margin-top: 3rem;
+    padding: 1.2rem 5rem;
+    text-align: center;
+    transform: translateX(-167%);
+}
+
+fieldset {
+    display: flex;
+    margin-bottom: -8rem;
+    transform: translateY(-90%);
+}
+fieldset legend {
+    transform: translateY(150%);
+}
+
+#prefText{
+    margin: 0 3rem;
+}
+select {
+    width: 30vw;
+}
+#selects {
+    margin-right: -60rem;
+    transform: translateY(-174%);
+}
+#selects label {
+    transform: translateX(-45%);
+}
+
 /* label[for="prefEmail"], label[for="prefText"], label[for="prefPhone"] {
 } */
 
@@ -1227,7 +1272,7 @@ form div {
 
     #plan {
         margin-bottom: 1rem;
-        padding-bottom: 1rem;
+        padding: 5rem 0;
     }
     #plan img {
         padding: 3rem 2rem 2rem 2rem;
@@ -1257,6 +1302,9 @@ form div {
         transform: translateX(10%);
     }
 
+    #testimonials {
+        padding: 5rem 0;
+    }
     #testimonials h3 {
         font-size: 28pt;
         transform: translateX(-25%);
